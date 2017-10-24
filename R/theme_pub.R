@@ -13,6 +13,7 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
+#' @export
 theme_pub <- function(base_size=14, base_family="helvetica") {
   (theme_foundation(base_size=base_size, base_family=base_family)
     + theme(plot.title = element_text(face = "bold",
@@ -42,12 +43,14 @@ theme_pub <- function(base_size=14, base_family="helvetica") {
 
 }
 
+#' @export
 scale_fill_pub <- function(...){
   library(scales)
   discrete_scale("fill","Publication",manual_pal(values = c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33")), ...)
 
 }
 
+#' @export
 scale_colour_pub <- function(...){
   library(scales)
   discrete_scale("colour","Publication",manual_pal(values = c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33")), ...)
